@@ -2,12 +2,20 @@
 <html>
 
 <head>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-3704331-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-3704331-1');
+    </script>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>*Alan Marchman | Front End Web Designer and Developer</title>
     <meta name="description" content="Front End Web Designer and Developer, specializing in a strict adherence to modern responsive web standards, accessibility, and creative problem solving.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="c/dave.css" rel="stylesheet">
+    <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -21,12 +29,38 @@
     </header>
 
     
-    <div class="container h-100 d-flex" aria-label="Introduction">
-        <div class="jumbotron mx-auto my-auto text-center text-lowercase">
-            <h1>Front End Web Designer and Developer</h1>
+    <section class="container h-100 d-flex" aria-label="Introduction">
+        <div class="jumbotron mx-auto my-auto text-center">
+            <h1 class="text-lowercase">Front End Web Designer and Developer</h1>
             <p class="lead">Specializing in a strict adherence to modern responsive web standards, accessibility, and creative problem solving.</p>
+            <div class="continue"><a class="page-scroll" href="#about"><i class="far fa-arrow-alt-circle-down fa-4x"></i><span class="sr-only">Scroll for more</span></a></div>
         </div>
-    </div>
+    </section>
+
+    <section class="content plus theme-light" aria-label="about" id="about">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-4">
+                    <img alt="Honestly, I'm really bad at taking pictures of myself." class="d-block img-fluid mb-3 mb-md-0 mx-auto rounded-circle" src="i/selfie.jpg">
+                </div>
+                <div class="col-12 col-md-8">
+                    <h2 class="text-lowercase">Web designer. Web Developer. Graphic Designer. World-Champion Selfie Taker.</h2>
+                    <p>My interest in web design began way back in the late nineties when I acquired my first computer and spent far too much time tying up my phone line to browse the internet. I earned a degree in web design in 2002, which led to a career that includes teaching web design and development, starting up and working for design firms, and working in a large corporate environment. Over the last 16 years I&rsquo;ve designed and built all sorts of websites for a wide variety of industries.</p>
+                    <p>When began building websites, the average internet user squinted at browsers on boxy beige monitors with tiny glass screens. Today I specialize in building mobile-first responsive web designs optimized for viewing on those magic glass rectangles we can&rsquo;t seem to stop staring at. I will continue to design and build websites until someone tells me to stop, and I look forward to the day we finally find out what the internet smells like (my guess is bananas).</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content plus">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="lead">The rest of this page is in progress. In the meantime, <a href="https://www.linkedin.com/in/alanmarchman/" rel="nofollow noopener" target="_blank" title="">find out more about me</a> on LinkedIn.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     
 
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
@@ -40,6 +74,23 @@
             google: {
                 families: ['Roboto+Condensed:400,400i,700,700i','Aleo:400,400i,700,700i']
             }
+        });
+
+        $(function() {
+            $('a.page-scroll').bind('click', function(event) {
+                var $anchor = $(this);
+                if($(window).width() <= 576) {
+                    var $offset = 52
+                } else if(($(window).width() > 577) && ($(window).width() <= 834)) {
+                    var $offset = 120
+                } else {
+                    var $offset = 20
+                }
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top-$offset
+                }, 1000, 'easeInOutExpo');
+                event.preventDefault();
+            });
         });
     </script>
 
