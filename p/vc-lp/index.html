@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Virginia College</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow, noarchive">
+
+    <link href="css/realize-base.css" rel="stylesheet">
+
+
+    <link href="css/penn-foster.css" rel="stylesheet">
+    <!--[if lte IE 9]>
+  <style type="text/css">
+  	form label.invisible {
+		display: block;
+		height: 20px !important;
+		margin-top: 10px;
+		visibility: visible !important;
+  	}	
+  </style>
+<![endif]-->
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<script>
+		for(var e,l='article aside footer header nav section time'.split(' ');e=l.pop();document.createElement(e))
+	</script>
+<![endif]-->
+
+</head>
+
+<body id="pagetop">
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+
+            <div class="navbar-header">
+                <a class="navbar-brand page-scroll" href="javascript:void">
+                    <img class="logo_svg" src="images/vc_pf_logo_3.svg" alt="Penn Foster services offered at Virginia College">
+                </a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="jumbotron penn-foster">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7 col-md-offset-6 col-lg-offset-5">
+                    <h1>A Bright New Future is Right Around the Corner</h1>
+                    <p class="f-mw">Earn your high school diploma in as little as 12 weeks through Penn Foster.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class="content plus" aria-label="Call a Campus">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <h2 class="color-48 f-sc-lt pushdown">Schedule an appointment with a Virginia College admissions associate.</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8 col-md-offset-2 text-center">
+                    <p class="f-hv pushdown">In as little as 12 weeks, you can earn an accredited Penn Foster high school diploma using the computer facilities located at a Virginia College campus, at your own pace and at no cost to you. The sooner you get started, the sooner
+                        you could graduate and could then enroll in college and face a bright new future.</p>
+                    <p class="color-30 f-sc-md small text-uppercase">Call Today</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 col-md-offset-4">
+                    <label class="sr-only" for="campusPhone">Select a Campus</label>
+                    <select class="form-control" id="campusPhone">
+                    <option value="" selected>Select a campus</option>
+                    <option value="birmingham">Birmingham, AL</option>
+                    <option value="greensboro">Greensboro, NC</option>
+                    <option value="jacksonville">Jacksonville, FL</option>
+                    <option value="richmond">Richmond, VA</option>
+                </select>
+                    <div id="phoneResult" class="text-center"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="split-panel accent" id="form-panel" aria-label="Request Form">
+        <div class="split-panel-img hidden-xs hidden-sm info-img"></div>
+        <div class="split-panel-content">
+            <h2 class="color-00 f-sc-md text-center">Request Information</h2>
+            <form name="PFForm" id="PFForm" method="post" action="">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <label for="FirstName" class="sr-only">First Name</label>
+                        <input class="form-control input-lg" type="text" name="FirstName" placeholder="First Name" id="FirstName" value="" maxlength="50" required>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <label for="LastName" class="sr-only">Last Name</label>
+                        <input class="form-control input-lg" type="text" name="LastName" placeholder="Last Name" id="LastName" value="" maxlength="50" required>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <label for="Telephone" class="sr-only">Phone Number</label>
+                        <input class="form-control input-lg" type="tel" name="Telephone" placeholder="Phone Number" id="Telephone" value="" maxlength="10" required>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <label for="Email" class="sr-only">Email Address</label>
+                        <input class="form-control input-lg" type="email" name="Email" placeholder="Email Address" id="Email" value="" maxlength="100" required>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <label for="lastGrade" class="sr-only">Last Grade Completed</label>
+                        <select class="form-control input-lg" name="lastGrade" id="lastGrade" required>
+                        <option value="">Last Grade Completed</option>
+                        <option value="9th Grade">9th Grade</option>
+                        <option value="10th Grade">10th Grade</option>
+                        <option value="11th Grade">11th Grade</option>
+                    </select>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <label for="Campus" class="sr-only">Preferred Campus</label>
+                        <select class="form-control input-lg" name="Campus" id="Campus" required>
+                        <option value="" selected>Preferred Campus</option>
+                        <option data-cid="7" value="birmingham.info@vc.edu">Birmingham, AL</option>
+                        <option data-cid="45" value="greensboro.info@vc.edu">Greensboro, NC</option>
+                        <option data-cid="24" value="jacksonville.info@vc.edu">Jacksonville, FL</option>
+                        <option data-cid="36" value="richmond.info@vc.edu">Richmond, VA</option>
+                    </select>
+                    </div>
+                    <div class="col-sm-12 col-md-12">
+                        <button class="btn btn-default btn-lg text-uppercase disabled" type="submit">Submit</button>
+                    </div>
+                </div>
+                <input type="hidden" id="Verification" name="Verification" value="">
+                <script>
+                    document.getElementById('Verification').value = 'v3r1f13d';
+                </script>
+                <input type="hidden" id="Brand" name="Brand" value="BC">
+                <input type="hidden" name="LeadChannelId" id="LeadChannelId" value="912">
+                <input type="hidden" id="Test" name="Test" value="0">
+            </form>
+        </div>
+    </section>
+    <section class="content-alt plus pathways" aria-label="About the Program">
+        <div class="container">
+            <div class="row pushdown">
+                <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
+                    <h2 class="color-30 f-mw-bd pushdown text-uppercase">High School Diploma Pathways Program</h2>
+                    <p class="color-48 f-mw-bd small text-uppercase">Penn Foster High School program using the computer facilities located at Virginia College</p>
+                </div>
+            </div>
+            <div class="row pushdown">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <h3 class="color-48 f-sc-lt">You’ve waited long enough to have the career you’ve always wanted.</h3>
+                </div>
+            </div>
+            <div class="row pushdown">
+                <div class="col-xs-12 col-sm-12 col-md-5">
+                    <h4 class="color-30 f-hv-md text-uppercase">Pathways Program</h4>
+                    <p class="color-48 f-hv">In as little as 12 weeks, you can earn an accredited Penn Foster high school diploma using the computer facilities located at a Virginia College campus, at your own pace and at no cost to you.</p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-5 col-md-offset-2">
+                    <h4 class="color-30 f-hv-md text-uppercase">The Pathways Program is Designed for People Who</h4>
+                    <ul class="color-48 f-hv">
+                        <li>Do not have a high school diploma or GED</li>
+                        <li>Have had challenges completing the GED</li>
+                        <li>Can dedicate a minimum of 12 hours a week to on-campus classwork</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pushdown">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <p><a class="btn btn-primary btn-lg page-scroll" href="#form-panel" role="button">Let’s Talk</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content plus program" aria-label="Frequently Asked Questions">
+        <div class="container">
+            <div class="row pushdown">
+                <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1 text-center">
+                    <h2 class="color-30 f-mw-bd pushdown text-uppercase">Frequently Asked Questions</h2>
+                </div>
+            </div>
+            <div class="row pushdown">
+                <div class="col-xs-12 col-sm-12 col-md-10 col-md-offset-1">
+                    <dl>
+                        <dt>Will I get credit for the high school classes I have already taken?</dt>
+                        <dl>Penn Foster transfer in the credits you’ve already earned from either high school or GED work, so you only take the credits you need to earn your diploma.</dl>
+                        <dt>Will it fit into my schedule?</dt>
+                        <dl>You only need to spend two or three days a week doing classwork. Class times are 10am-1pm, Monday-Thursday on the Virginia College campus. You choose the days that work best for you.</dl>
+                        <dt>How is it structured?</dt>
+                        <dl>You perform the tasks outlined in the accredited Penn Foster High School program. It’s made up of short, easy-to-understand lessons with online testing you can complete at your own pace.</dl>
+                        <dt>Will there be someone on campus to answer questions?</dt>
+                        <dl>The College will facilitate the use of the Penn Foster Pathways Program.</dl>
+                        <dt>How long will it take to earn my high school diploma?</dt>
+                        <dl>You can complete the Penn Foster Pathways Program in as little as 12 weeks.</dl>
+                        <dt>How much will it cost?</dt>
+                        <dl>We offer the Penn Foster High School Diploma Pathways Program at no cost to you.</dl>
+                        <dt>Why is it free?</dt>
+                        <dl>Virginia College values the importance of education and wants to help our community members succeed.</dl>
+                        <dt>Why do I need a high school diploma?</dt>
+                        <dl>The Penn Foster Pathways Program high school courses can help prepare you to be successful in college and in life. Plus, students with a high school diploma earn $1,600 more per month than those with a GED.* On average, students who have attended college and work full-time earn over $37,500 a year.</dl>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="content-accent plus dont-wait" aria-label="Call to Action">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                    <h2 class="f-mw-bd color-00 pushdown">Don’t Wait Any Longer</h2>
+
+                    <p class="f-sc-lt lead pushdown">In as little as 12 weeks, you could be a Penn Foster high school graduate and on your way to college!</p>
+
+                    <p><a class="btn btn-default btn-lg page-scroll" href="#form-panel" role="button">Get Started Today</a></p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="pf-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-8">
+                    <p class="f-hv">Penn Foster High School Pathways Program is not within the institutional scope of the College’s accreditation.</p>
+                    <p class="f-hv-md text-uppercase">Sources</p>
+                    <p class="f-hv">* <a href="http://blogs.census.gov/2012/02/27/ged-recipients-have-lower-earnings-are-less-likely-to-enter-college/" target="_blank">blogs.census.gov/2012/02/27/ged-recipients-have-lower-earnings-are-less-likely-to-enter-college/</a></p>
+                    <p class="f-hv">** <a href="http://www.bls.gov/emp/ep_chart_001.htm" target="_blank">www.bls.gov/emp/ep_chart_001.htm</a></p>
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <p class="f-hv">Penn Foster High School is accredited by</p>
+                    <img alt="DEAC / MSA CESS Logos" src="images/pf-footer-logos.png">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script>
+        window.jQuery || document.write('<script src="js/jquery-1.11.2.min.js"><\/script>')
+    </script>
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.matchHeight.min.js"></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/validator.js"></script>
+    <script>
+        $(function() {
+            $('.thumbnail').matchHeight();
+        });
+
+        $(function() {
+            $('a.page-scroll').bind('click', function(event) {
+                var $anchor = $(this);
+                if ($(window).width() < 767) {
+                    var $offset = 60
+                } else {
+                    var $offset = 120
+                }
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top - $offset
+                }, 1000, 'easeInOutExpo');
+                event.preventDefault();
+            });
+        });
+
+        $(function() {
+            $('#scroll-menu li a').on('click', function(e) {
+                e.preventDefault();
+                var $thisNav = $(this);
+                if (!$thisNav.hasClass('active')) {
+                    $('#scroll-menu li a').removeClass('active');
+                    $thisNav.addClass('active');
+                }
+            })
+        })
+
+        $(function() {
+            $('.navbar-brand').on('click', function(e) {
+                $('#scroll-menu li a').removeClass('active');
+            })
+        })
+
+        $(function() {
+            $('.btn-huge').on('click', function(e) {
+                $('#scroll-menu li a').removeClass('active');
+            })
+        })
+    </script>
+    <script>
+        $("#campusPhone").change(function() {
+            console.log($('#campusPhone').val());
+
+            $("#phoneResult").load("campusphones.html #" + $('#campusPhone').val());
+        });
+    </script>
+    <script>
+        $(function() {
+            $('#Telephone').keyup(function() {
+                this.value = this.value.replace(/(\d{3})\-?(\d{3})\-?(\d{4})/, '$1-$2-$3');
+            });
+        });
+    </script>
+    <script>
+        var preSelectedInterestId = "0";;
+
+        var preSelectedSchoolId = 0;
+
+        $(document).ready(function() {
+            //first, detect when initial DD changes
+            $("#schoolid1").change(function() {
+                //get what they selected
+                if (preSelectedSchoolId != 0) {
+                    var selected = preSelectedSchoolId;
+                } else {
+                    var selected = $("option:selected", this).val();
+                }
+                //no matter what, clear the other DD
+                //Tip taken from: http://stackoverflow.com/questions/47824/using-core-jquery-how-do-you-remove-all-the-options-of-a-select-box-then-add-on
+                $("#interestid1").children().remove().end().append("<option value=\"\">Select a Program (select a location first)</option>");
+                //now load in new options if I picked a campus
+                if (selected == "") return;
+                $.getJSON("includes/data.cfc?method=getprograms&returnformat=json", {
+                    "schoolid": selected
+                }, function(res, code) {
+                    var newoptions = "";
+                    for (var j = 0; j < res.length; j++) {
+                        //In our result, ID is what we will use for the value, and NAME for the label
+                        newoptions += "<option value=\"" + res[j].ID + "\">" + res[j].NAME + "</option>";
+                        lastopt = res[j].ID;
+                    }
+                    $("#interestid1").children().end().append(newoptions);
+                    if (res.length == 1) {
+                        $('#interestid1').val(lastopt);
+                    } else if (preSelectedInterestId != 0) {
+                        $('#interestid1').val(preSelectedInterestId);
+                    }
+                });
+            });
+
+        })
+
+        $(document).ready(function() {
+
+            var preSelectedSchoolId = 0;
+
+            //first, detect when initial DD changes
+            $("#schoolid2").change(function() {
+                //get what they selected
+                if (preSelectedSchoolId != 0) {
+                    var selected = preSelectedSchoolId;
+                } else {
+                    var selected = $("option:selected", this).val();
+                }
+                //no matter what, clear the other DD
+                //Tip taken from: http://stackoverflow.com/questions/47824/using-core-jquery-how-do-you-remove-all-the-options-of-a-select-box-then-add-on
+                $("#interestid2").children().remove().end().append("<option value=\"\">Select a Program (select a location first)</option>");
+                //now load in new options if I picked a campus
+                if (selected == "") return;
+                $.getJSON("includes/data.cfc?method=getprograms&returnformat=json", {
+                    "schoolid": selected
+                }, function(res, code) {
+                    var newoptions = "";
+                    for (var j = 0; j < res.length; j++) {
+                        //In our result, ID is what we will use for the value, and NAME for the label
+                        newoptions += "<option value=\"" + res[j].ID + "\">" + res[j].NAME + "</option>";
+                        lastopt = res[j].ID;
+                    }
+                    $("#interestid2").children().end().append(newoptions);
+                    if (res.length == 1) {
+                        $('#interestid2').val(lastopt);
+                    } else if (preSelectedInterestId != 0) {
+                        $('#interestid2').val(preSelectedInterestId);
+                    }
+                });
+            });
+
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#schoolid1").trigger("change");
+        });
+        $(document).ready(function() {
+            $("#schoolid2").trigger("change");
+        });
+    </script>
+</body>
+
+</html>
