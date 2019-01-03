@@ -463,6 +463,8 @@
             </div>
         </div>
     </div>
+
+    <a class="btn btn-dark rounded-circle" href="javascript:void" id="back-to-top" role="button" title=""><i class="fa fa-arrow-up fa-2x" aria-hidden="true" title="Back to Top Icon"></i><span class="sr-only">Back to Top</span></a>
     
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -497,6 +499,29 @@
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
         });
+
+        if ($('#back-to-top').length) {
+            var scrollTrigger = 200, // px
+                backToTop = function() {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop > scrollTrigger) {
+                        $('#back-to-top').addClass('show');
+                    } else {
+                        $('#back-to-top').removeClass('show');
+                    }
+                };
+            backToTop();
+            $(window).on('scroll', function() {
+                backToTop();
+            });
+            $('#back-to-top').on('click', function(e) {
+                e.preventDefault();
+                $('html,body').animate({
+                    scrollTop: 0
+                }, 700);
+                $('#back-to-top').blur();
+            });
+        }
     </script>
 
 </body>
